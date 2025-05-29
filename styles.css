@@ -3,7 +3,7 @@
 #grid {
   display: grid;
   grid-template-columns: repeat(4, 242.5px);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 124px);
   gap: 4px;
   background-color: white;
 }
@@ -63,7 +63,7 @@
 }
 
 #grid div:nth-child(10) {
-  grid-column: span 3 / 5;
+  grid-column: span 3 / auto;
   grid-row: 5;
 }
 
