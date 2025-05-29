@@ -14,11 +14,11 @@
   background-color: #228B22;
   color: white;
   font-size: 24px;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-start;
-  padding: 15px;
+  padding: 5px;
 }
 
 /* Fix #1 - Match grid-column exactly */
