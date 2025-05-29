@@ -1,56 +1,70 @@
 /*  your css code here. If applicable */
+
 #grid {
-        display: grid;
-        grid-template-columns: repeat(4, 124px);
-        grid-template-rows: repeat(5, 124px);
-        gap: 4px;
-        background-color: white;
-      }
-      #grid div {
-        background-color: #228B22;
-        color: white;
-        font-size: 24px;
-        display: flex;
-        justify-content: flex-start;
-        padding: 5px;
-      }
-      #grid div:nth-child(1) {
-        grid-column: 1 / 5;
-        grid-row: 1;
-      }
-      #grid div:nth-child(2) {
-        grid-column: 1;
-        grid-row: 2 / 6;
-      }
-      #grid div:nth-child(3) {
-        grid-column: 2;
-        grid-row: 2;
-      }
-      #grid div:nth-child(4) {
-        grid-column: 3 / 5;
-        grid-row: 2;
-      }
-      #grid div:nth-child(5) {
-        grid-column: 2 / 4;
-        grid-row: 3;
-      }
-      #grid div:nth-child(6) {
-        grid-column: 4;
-        grid-row: 3;
-      }
-      #grid div:nth-child(7) {
-        grid-column: 2;
-        grid-row: 4;
-      }
-      #grid div:nth-child(8) {
-        grid-column: 3;
-        grid-row: 4;
-      }
-      #grid div:nth-child(9) {
-        grid-column: 4;
-        grid-row: 4;
-      }
-      #grid div:nth-child(10) {
-        grid-column: 2 / 5;
-        grid-row: 5;
-      }
+  display: grid;
+  grid-template-columns: repeat(4, 124px);
+  grid-template-rows: repeat(5, 124px);
+  gap: 4px;
+  background-color: white;
+  height: calc(5 * 124px + 4 * 4px); /* exactly 640px */
+  overflow: hidden; /* prevent extra rows from being created */
+}
+#grid div {
+  background-color: #228B22;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+#grid div:nth-child(1) {
+  grid-column: span 4 / auto;
+  grid-row: 1;
+}
+
+#grid div:nth-child(2) {
+  grid-column: 1;
+  grid-row: span 4;
+}
+
+#grid div:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#grid div:nth-child(4) {
+  grid-column:span 2 / auto;
+  grid-row: 2;
+}
+
+#grid div:nth-child(5) {
+  grid-column:span 2/ auto;
+}
+
+#grid div:nth-child(6) {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#grid div:nth-child(7) {
+  grid-column: 2 ;
+  grid-row: 4;
+}
+
+#grid div:nth-child(8) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#grid div:nth-child(9) {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+#grid div:nth-child(10) {
+  grid-column: span 3 / auto;
+  grid-row: 5;
+}
+
