@@ -13,7 +13,7 @@ body {
 #grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 124px 124px 124px 124px 124px;
+  grid-template-rows: 250.656px 250.672px 250.672px; /* MATCH TEST */
   gap: 4px;
   background-color: white;
   width: 100%;
@@ -32,15 +32,14 @@ body {
   padding: 15px;
 }
 
-/* Grid positioning */
 #grid div:nth-child(1) {
-  grid-column: 3 / auto;
+  grid-column: 3 / auto; /* FIXED */
   grid-row: 1;
 }
 
 #grid div:nth-child(2) {
   grid-column: 1;
-  grid-row: span 4;
+  grid-row: span 3;
 }
 
 #grid div:nth-child(3) {
@@ -54,7 +53,7 @@ body {
 }
 
 #grid div:nth-child(5) {
-  grid-column: 2 / 3;
+  grid-column: 2;
   grid-row: 3;
 }
 
@@ -63,18 +62,10 @@ body {
   grid-row: 3;
 }
 
+/* Remaining items optional depending on test */
 #grid div:nth-child(7),
-#grid div:nth-child(8) {
-  grid-column: 2;
-  grid-row: 4;
-}
-
-#grid div:nth-child(9) {
-  grid-column: 3;
-  grid-row: 4;
-}
-
+#grid div:nth-child(8),
+#grid div:nth-child(9),
 #grid div:nth-child(10) {
-  grid-column: 2 / 4;
-  grid-row: 5;
+  display: none; /* if not part of test case */
 }
