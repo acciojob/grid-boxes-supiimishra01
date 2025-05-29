@@ -2,8 +2,8 @@
 
 #grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 124px);
+  grid-template-columns: repeat(4, 242.5px);
+  grid-template-rows: repeat(5, 1fr);
   gap: 4px;
   background-color: white;
 }
