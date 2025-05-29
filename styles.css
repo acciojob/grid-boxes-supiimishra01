@@ -3,7 +3,7 @@
 #grid {
   display: grid;
   grid-template-columns: repeat(4, 124px);
-  grid-template-rows: repeat(5, 124px);
+  /* grid-template-rows: repeat(5, 124px); */
   gap: 4px;
   background-color: white;
   height: calc(5 * 124px + 4 * 4px); /* exactly 640px */
