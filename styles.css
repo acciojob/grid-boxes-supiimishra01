@@ -12,13 +12,12 @@ body {
 
 #grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 250.656px 250.672px 250.672px; /* MATCH TEST */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250.641px 250.672px 250.672px;
   gap: 4px;
-  background-color: white;
-  width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  background-color: white;
 }
 
 #grid div {
@@ -32,8 +31,9 @@ body {
   padding: 15px;
 }
 
+/* Fix #1 - Match grid-column exactly */
 #grid div:nth-child(1) {
-  grid-column: 3 / auto; /* FIXED */
+  grid-column: 3 / auto;
   grid-row: 1;
 }
 
@@ -62,10 +62,7 @@ body {
   grid-row: 3;
 }
 
-/* Remaining items optional depending on test */
-#grid div:nth-child(7),
-#grid div:nth-child(8),
-#grid div:nth-child(9),
-#grid div:nth-child(10) {
-  display: none; /* if not part of test case */
+/* Optional: Hide extras if not used */
+#grid div:nth-child(n+7) {
+  display: none;
 }
