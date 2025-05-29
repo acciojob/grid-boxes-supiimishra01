@@ -6,6 +6,8 @@
   grid-template-rows: repeat(5, 124px);
   gap: 4px;
   background-color: white;
+  height: 640px; /* 5 * 124px + 4 * 4px gap = 640px */
+  overflow: hidden; /* Prevents extra rows from displaying */	
 }
 
 #grid div {
