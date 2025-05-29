@@ -3,7 +3,7 @@
 #grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 60px);
+  grid-template-rows: repeat(5, 124px);
   gap: 4px;
   background-color: white;
 }
@@ -12,14 +12,12 @@
   background-color: #228B22;
   color: white;
   font-size: 24px;
-  /* font-weight: bold; */
   display: flex;
   /* align-items: center; */
   justify-content: flex-start;
   padding: 5px;
 }
 
-/* Fix #1 - Match grid-column exactly */
 #grid div:nth-child(1) {
   grid-column: span 4 / auto;
   grid-row: 1;
@@ -36,7 +34,7 @@
 }
 
 #grid div:nth-child(4) {
-  grid-column: 3 / 5;
+  grid-column:span 2 / auto;
   grid-row: 2;
 }
 
